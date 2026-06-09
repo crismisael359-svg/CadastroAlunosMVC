@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Boletim";
+}
+
+<h1>Boletim de Notas</h1>
+
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>Disciplina</th>
+        <th>Nota</th>
+        <th>Status</th>
+    </tr>
+
+    @{
+        double soma = 0;
+    }
+
+    @for(int i = 0; i < ViewBag.Disciplinas.Count; i++)
+    {
+        soma += ViewBag.Notas[i];
+
+        <tr>
+            <td>@(i + 1)</td>
+            <td>@ViewBag.Disciplinas[i]</td>
+            <td>@ViewBag.Notas[i]</td>
+
+            <td>
+                @if(ViewBag.Notas[i] >= 7)
+                {
+                    <span style="color:green">Aprovado</span>
+                }
+                else
+                {
+                    <span style="color:red">Reprovado</span>
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+    Média Geral:
+    @(soma / ViewBag.Notas.Count)
+</p>
+
+@{
+    double media = soma / ViewBag.Notas.Count;
+    string conceito = "";
+
+    switch ((int)media)
+    {
+        case 9:
+        case 10:
+            conceito = "A";
+            break;
+
+        case 7:
+        case 8:
+            conceito = "B";
+            break;
+
+        case 5:
+        case 6:
+            conceito = "C";
+            break;
+
+        default:
+            conceito = "D";
+            break;
+    }
+}
+
+<p>
+    Conceito: @conceito
+</p>

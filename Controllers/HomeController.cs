@@ -1,29 +1,38 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using CadastroAlunosMVC.Models;
 
-namespace CadastroAlunosMVC.Controllers;
-
-public class HomeController : Controller
+namespace CadastroAlunosMVC.Controllers
 {
-    public IActionResult Index()
+    public class HomeController : Controller
     {
-        return View();
-    }
+        public IActionResult Index()
+        {
+            return View();
+        }
 
-    public IActionResult Sobre()
-{
-    return View();
-}
+        public IActionResult Boletim()
+        {
+            List<string> disciplinas = new List<string>()
+            {
+                "Matemática",
+                "Português",
+                "História",
+                "Geografia",
+                "Inglês"
+            };
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+            List<double> notas = new List<double>()
+            {
+                8.5,
+                6.0,
+                9.0,
+                4.5,
+                7.5
+            };
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            ViewBag.Disciplinas = disciplinas;
+            ViewBag.Notas = notas;
+
+            return View();
+        }
     }
 }

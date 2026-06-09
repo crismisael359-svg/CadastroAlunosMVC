@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CadastroAlunosMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f54d6b995ec8f222e9dc2b82bc76912bf6e998a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7f0af5afb6041f62ae89410cf6ab8c8fb1e1e51")]
 [assembly: System.Reflection.AssemblyProductAttribute("CadastroAlunosMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CadastroAlunosMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
