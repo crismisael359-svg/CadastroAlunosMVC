@@ -1,0 +1,31 @@
+<h1>Catálogo de Produtos</h1>
+
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Preço</th>
+    </tr>
+
+    @for (int i = 0; i < ViewBag.Produtos.Count; i++)
+    {
+        if (ViewBag.Precos[i] < 100)
+        {
+            <tr style="color:green">
+                <td>@(i + 1)</td>
+                <td>@ViewBag.Produtos[i]</td>
+                <td>R$ @ViewBag.Precos[i]</td>
+            </tr>
+        }
+        else
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@ViewBag.Produtos[i]</td>
+                <td>R$ @ViewBag.Precos[i]</td>
+            </tr>
+        }
+    }
+</table>
+
+<p>Total: @ViewBag.Produtos.Count produtos</p>

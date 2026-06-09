@@ -31,3 +31,4 @@ C:\Users\55119\CadastroAlunosMVC\obj\Debug\net8.0\refint\CadastroAlunosMVC.dll
 C:\Users\55119\CadastroAlunosMVC\obj\Debug\net8.0\CadastroAlunosMVC.pdb
 C:\Users\55119\CadastroAlunosMVC\obj\Debug\net8.0\CadastroAlunosMVC.genruntimeconfig.cache
 C:\Users\55119\CadastroAlunosMVC\obj\Debug\net8.0\ref\CadastroAlunosMVC.dll
+C:\Users\55119\CadastroAlunosMVC\obj\Debug\net8.0\CadastroAlunosMVC.sourcelink.json
