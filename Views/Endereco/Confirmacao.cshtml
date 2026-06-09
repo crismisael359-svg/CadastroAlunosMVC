@@ -1,0 +1,22 @@
+@model CadastroAlunosMVC.Models.Endereco
+
+<h2 style="color:green">
+    Endereço localizado com sucesso!
+</h2>
+
+<p><strong>CEP:</strong> @Model.CEP</p>
+
+<p><strong>Logradouro:</strong> @Model.Logradouro</p>
+
+<p><strong>Bairro:</strong> @Model.Bairro</p>
+
+<p><strong>Cidade:</strong> @Model.Cidade</p>
+
+<p><strong>UF:</strong> @Model.UF</p>
+
+<br />
+
+<a asp-controller="Endereco"
+   asp-action="Buscar">
+    Nova Consulta
+</a>

@@ -1,0 +1,61 @@
+@model CadastroAlunosMVC.Models.Endereco
+
+<h2>Busca de Endereço</h2>
+
+<form asp-action="Buscar" method="post">
+
+    <div>
+        <label>CEP</label>
+        <input asp-for="CEP" id="CEP" />
+    </div>
+
+    <div>
+        <label>Logradouro</label>
+        <input asp-for="Logradouro" id="Logradouro" />
+    </div>
+
+    <div>
+        <label>Bairro</label>
+        <input asp-for="Bairro" id="Bairro" />
+    </div>
+
+    <div>
+        <label>Cidade</label>
+        <input asp-for="Cidade" id="Cidade" />
+    </div>
+
+    <div>
+        <label>UF</label>
+        <input asp-for="UF" id="UF" />
+    </div>
+
+    <button type="submit">
+        Enviar
+    </button>
+
+</form>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+
+$("#CEP").blur(function () {
+
+    var cep = $(this).val();
+
+    $.getJSON(
+        "https://viacep.com.br/ws/" + cep + "/json/",
+        function (dados) {
+
+            $("#Logradouro").val(dados.logradouro);
+            $("#Bairro").val(dados.bairro);
+            $("#Cidade").val(dados.localidade);
+            $("#UF").val(dados.uf);
+
+        }
+    );
+
+});
+
+</script>
+
