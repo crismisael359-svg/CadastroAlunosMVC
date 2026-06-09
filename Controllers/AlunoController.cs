@@ -11,15 +11,15 @@ namespace CadastroAlunosMVC.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Cadastrar(Aluno aluno)
-        {
-            if (ModelState.IsValid)
-            {
-                ViewBag.Mensagem = "Aluno cadastrado com sucesso!";
-            }
+      [HttpPost]
+public IActionResult Cadastrar(Aluno aluno)
+{
+    if (ModelState.IsValid)
+    {
+        return View("Confirmacao", aluno);
+    }
 
-            return View(aluno);
-        }
+    return View(aluno);
+}
     }
 }
